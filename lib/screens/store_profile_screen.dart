@@ -1,5 +1,7 @@
 // import 'package:dotted_border/dotted_border.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../models/check_model.dart';
 import 'store_profile_screen/widgets/custom_text_field.dart';
@@ -11,31 +13,31 @@ import 'store_profile_screen/widgets/rich_text_widget.dart';
 // import '../widgets/texts.dart';
 
 List<CheckModel> checklist = [
-  CheckModel(txt: "月", value: false),
-  CheckModel(txt: "火", value: false),
-  CheckModel(txt: "水", value: false),
-  CheckModel(txt: "木", value: false),
-  CheckModel(txt: "金", value: false),
-  CheckModel(txt: "土", value: true),
-  CheckModel(txt: "日", value: true),
-  CheckModel(txt: "祝", value: true),
+  CheckModel(txt: '月', value: false),
+  CheckModel(txt: '火', value: false),
+  CheckModel(txt: '水', value: false),
+  CheckModel(txt: '木', value: false),
+  CheckModel(txt: '金', value: false),
+  CheckModel(txt: '土', value: true),
+  CheckModel(txt: '日', value: true),
+  CheckModel(txt: '祝', value: true),
 ];
 
 List<String> img3 = [
-  "assets/images/Input3.png",
-  "assets/images/Input4.png",
-  "assets/images/Input5.5.png",
+  'assets/images/Input3.png',
+  'assets/images/Input4.png',
+  'assets/images/Input5.5.png',
 ];
 
 List<String> img4 = [
-  "assets/images/input6.png",
-  "assets/images/inpu7.png",
-  "assets/images/input8.png",
+  'assets/images/input6.png',
+  'assets/images/inpu7.png',
+  'assets/images/input8.png',
 ];
 List<String> img5 = [
-  "assets/images/ice1.png",
-  "assets/images/ice2.png",
-  "assets/images/ice3.png",
+  'assets/images/ice1.png',
+  'assets/images/ice2.png',
+  'assets/images/ice3.png',
 ];
 const List<String> list = <String>[
   '10 : 00',
@@ -89,7 +91,7 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                             )),
                       ),
                       const Text(
-                        "店舗プロフィール編集",
+                        '店舗プロフィール編集',
                         style: TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w500),
                       ),
@@ -108,7 +110,7 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                               backgroundColor: Color(0xffEE7D42),
                               child: Center(
                                 child: Text(
-                                  "99+",
+                                  '99+',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 9),
                                 ),
@@ -128,24 +130,24 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const RichTextWidget(
-                          text: "店舗名",
+                          text: '店舗名',
                         ),
                         CustomTextField(
-                          controller: TextEditingController(text: "Mer キッチン"),
+                          controller: TextEditingController(text: 'Mer キッチン'),
                         ),
-                        const RichTextWidget(text: "代表担当者名"),
+                        const RichTextWidget(text: '代表担当者名'),
                         CustomTextField(
-                          controller: TextEditingController(text: "林田　絵梨花"),
+                          controller: TextEditingController(text: '林田　絵梨花'),
                         ),
-                        const RichTextWidget(text: "店舗電話番号"),
-                        CustomTextField(
-                          controller:
-                              TextEditingController(text: "123 - 4567 8910"),
-                        ),
-                        const RichTextWidget(text: "店舗住所"),
+                        const RichTextWidget(text: '店舗電話番号'),
                         CustomTextField(
                           controller:
-                              TextEditingController(text: "大分県豊後高田市払田791-13"),
+                              TextEditingController(text: '123 - 4567 8910'),
+                        ),
+                        const RichTextWidget(text: '店舗住所'),
+                        CustomTextField(
+                          controller:
+                              TextEditingController(text: '大分県豊後高田市払田791-13'),
                         ),
                         Ink(
                           width: 350,
@@ -154,133 +156,134 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                             borderRadius: BorderRadius.circular(5),
                           ),
                           child: Image.asset(
-                            "assets/images/snazzy-image (1) 1.png",
+                            'assets/images/snazzy-image (1) 1.png',
                             fit: BoxFit.fill,
-                            // height: 219,
-                            // width: 340,
                           ),
                         ),
                         const RichTextWidget(
-                          text: "店舗外観",
-                          text2: "（最大3枚まで）",
+                          text: '店舗外観',
+                          text2: '（最大3枚まで）',
                         ),
                         SizedBox(
-                          height: 110,
-                          width: 400,
+                          height: 110.h,
                           child: Row(
                             children: [
                               Image.asset(
-                                "assets/images/Input1.png",
-                                height: 91,
-                                width: 91,
+                                'assets/images/Input1.png',
+                                height: 91.h,
+                                width: 91.h,
+                                fit: BoxFit.cover,
                               ),
                               Image.asset(
-                                "assets/images/Input1.png",
-                                height: 91,
-                                width: 91,
+                                'assets/images/Input1.png',
+                                height: 91.h,
+                                width: 91.h,
+                                fit: BoxFit.cover,
                               ),
-                              const SizedBox(
-                                width: 80,
-                                height: 80,
-                                // child: DottedBorder(
-                                //   borderPadding: const EdgeInsets.all(5),
-                                //   color: const Color(0xffE8E8E8),
-                                //   strokeWidth: 2,
-                                //   dashPattern: const [
-                                //     4,
-                                //     4,
-                                //   ],
-                                //   child: Center(
-                                //     child: Column(
-                                //       crossAxisAlignment:
-                                //           CrossAxisAlignment.center,
-                                //       mainAxisAlignment:
-                                //           MainAxisAlignment.center,
-                                //       children: [
-                                //         IconButton(
-                                //             onPressed: () {},
-                                //             icon: Image.asset(
-                                //               "assets/images/gallery.png",
-                                //               width: 30,
-                                //               height: 30,
-                                //               color: const Color(0xff9C9896),
-                                //             )),
-                                //         const SizedBox(
-                                //           width: 40,
-                                //           height: 20,
-                                //           child: Text(
-                                //             "写真を追加",
-                                //             style: TextStyle(
-                                //               color: Color(0xff9C9896),
-                                //               fontSize: 12,
-                                //             ),
-                                //           ),
-                                //         )
-                                //       ],
-                                //     ),
-                                //   ),
-                                // ),
+                              SizedBox(
+                                width: 91.h,
+                                height: 91.h,
+                                child: DottedBorder(
+                                  borderPadding: const EdgeInsets.all(5),
+                                  color: const Color(0xffE8E8E8),
+                                  strokeWidth: 2,
+                                  dashPattern: const [4, 4],
+                                  child: Center(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        IconButton(
+                                            onPressed: () {},
+                                            icon: Image.asset(
+                                              'assets/images/gallery.png',
+                                              width: 30.h,
+                                              height: 30.h,
+                                              color: const Color(0xff9C9896),
+                                            )),
+                                        SizedBox(
+                                          height: 20.h,
+                                          child: Text(
+                                            '写真を追加',
+                                            style: TextStyle(
+                                              color: const Color(0xff9C9896),
+                                              fontSize: 12.h,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
                               )
                             ],
                           ),
                         ),
                         const RichTextWidget(
-                          text: "店舗内観",
-                          text2: "（1枚〜3枚ずつ追加してください）",
-                        ),
-                        SizedBox(
-                          height: 110,
-                          width: 400,
-                          child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            shrinkWrap: true,
-                            itemCount: 3,
-                            itemBuilder: (context, index) => Image.asset(
-                              "assets/images/Input2.png",
-                              height: 91,
-                              width: 91,
-                            ),
-                          ),
-                        ),
-                        const RichTextWidget(
-                          text: "料理写真",
-                          text2: "（1枚〜3枚ずつ追加してください）",
-                        ),
-                        SizedBox(
-                          height: 110,
-                          width: 400,
-                          child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            shrinkWrap: true,
-                            itemCount: 3,
-                            itemBuilder: (context, index) => Image.asset(
-                              img3[index],
-                              height: 91,
-                              width: 91,
-                            ),
-                          ),
-                        ),
-                        const RichTextWidget(
-                          text: "メニュー写真",
-                          text2: "（1枚〜3枚ずつ追加してください）",
+                          text: '店舗内観',
+                          text2: '（1枚〜3枚ずつ追加してください）',
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 5.0, bottom: 10),
                           child: SizedBox(
-                            height: 94,
+                            height: 91.h,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              shrinkWrap: true,
+                              itemCount: 3,
+                              itemBuilder: (context, index) => Padding(
+                                padding: const EdgeInsets.only(right: 9),
+                                child: Image.asset(
+                                  'assets/images/Input2.png',
+                                  height: 91.h,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const RichTextWidget(
+                          text: '料理写真',
+                          text2: '（1枚〜3枚ずつ追加してください）',
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5.0, bottom: 10),
+                          child: SizedBox(
+                            height: 91.h,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              shrinkWrap: true,
+                              itemCount: 3,
+                              itemBuilder: (context, index) => Image.asset(
+                                img3[index],
+                                height: 91.h,
+                                fit: BoxFit.fitHeight,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const RichTextWidget(
+                          text: 'メニュー写真',
+                          text2: '（1枚〜3枚ずつ追加してください）',
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5.0, bottom: 10),
+                          child: SizedBox(
+                            height: 91.h,
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               shrinkWrap: true,
                               itemCount: 3,
                               itemBuilder: (context, index) => Image.asset(
                                 img4[index],
-                                height: 91,
-                                width: 91,
+                                height: 91.h,
+                                fit: BoxFit.fitHeight,
                               ),
                             ),
                           ),
                         ),
-                        const RichTextWidget(text: "営業時間"),
+                        const RichTextWidget(text: '営業時間'),
                         Padding(
                           padding: const EdgeInsets.only(top: 5, bottom: 20),
                           child: Row(
@@ -322,7 +325,7 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                               const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
-                                  "~",
+                                  '~',
                                   style: TextStyle(
                                       fontSize: 20,
                                       color: Color(0xff4B4948),
@@ -374,7 +377,7 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                             ],
                           ),
                         ),
-                        const RichTextWidget(text: "ランチ時間"),
+                        const RichTextWidget(text: 'ランチ時間'),
                         Padding(
                           padding: const EdgeInsets.only(top: 5.0, bottom: 20),
                           child: Row(
@@ -416,7 +419,7 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                               const Padding(
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
-                                  "~",
+                                  '~',
                                   style: TextStyle(
                                       fontSize: 20,
                                       color: Color(0xff4B4948),
@@ -460,7 +463,7 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                             ],
                           ),
                         ),
-                        const RichTextWidget(text: "定休日"),
+                        const RichTextWidget(text: '定休日'),
                         SizedBox(
                           width: 300,
                           height: 150,
@@ -503,21 +506,23 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                             },
                           ),
                         ),
-                        const RichTextWidget(text: "料理カテゴリー"),
+                        const RichTextWidget(text: '料理カテゴリー'),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8),
                           child: Container(
                             width: 194,
-                            height: 38,
+                            height: 38.h,
+                            alignment: Alignment.center,
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 10),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
                                 border:
                                     Border.all(color: const Color(0xffE8E8E8))),
                             child: const Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Text(
-                                  "料理カテゴリー選択",
+                                  '料理カテゴリー選択',
                                   style: TextStyle(
                                       fontSize: 16, color: Color(0xffC7C4C0)),
                                 ),
@@ -530,31 +535,31 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                             ),
                           ),
                         ),
-                        const RichTextWidget(text: "予算"),
+                        const RichTextWidget(text: '予算'),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 3),
                           child: Row(
                             children: [
                               Container(
                                 width: 124,
-                                height: 38,
+                                height: 38.h,
+                                alignment: Alignment.centerLeft,
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 5, horizontal: 10),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(5),
                                     border: Border.all(
                                         color: const Color(0xffE8E8E8))),
-                                child: const Padding(
-                                  padding: EdgeInsets.all(3),
-                                  child: Text(
-                                    "¥ 1,000",
-                                    style: TextStyle(
-                                        fontSize: 16, color: Color(0xff454545)),
-                                  ),
+                                child: const Text(
+                                  '¥ 1,000',
+                                  style: TextStyle(
+                                      fontSize: 16, color: Color(0xff454545)),
                                 ),
                               ),
                               const Padding(
                                 padding: EdgeInsets.all(8),
                                 child: Text(
-                                  "~",
+                                  '~',
                                   style: TextStyle(
                                       fontSize: 20,
                                       color: Color(0xff4B4948),
@@ -563,29 +568,29 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                               ),
                               Container(
                                 width: 124,
-                                height: 38,
+                                height: 38.h,
+                                alignment: Alignment.centerLeft,
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 5, horizontal: 10),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(5),
                                     border: Border.all(
                                         color: const Color(0xffE8E8E8))),
-                                child: const Padding(
-                                  padding: EdgeInsets.all(3),
-                                  child: Text(
-                                    "¥ 2,000",
-                                    style: TextStyle(
-                                        fontSize: 16, color: Color(0xff454545)),
-                                  ),
+                                child: const Text(
+                                  '¥ 2,000',
+                                  style: TextStyle(
+                                      fontSize: 16, color: Color(0xff454545)),
                                 ),
                               ),
                             ],
                           ),
                         ),
-                        const RichTextWidget(text: "キャッチコピー"),
+                        const RichTextWidget(text: 'キャッチコピー'),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8),
                           child: Container(
-                              width: 335,
-                              height: 38,
+                              width: double.infinity,
+                              height: 38.h,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(5),
                                   border: Border.all(
@@ -593,18 +598,18 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                               child: const Padding(
                                 padding: EdgeInsets.all(3),
                                 child: Text(
-                                  "美味しい！リーズナブルなオムライスランチ！",
+                                  '美味しい！リーズナブルなオムライスランチ！',
                                   style: TextStyle(
                                       fontSize: 15, color: Color(0xff454545)),
                                 ),
                               )),
                         ),
-                        const RichTextWidget(text: "座席数"),
+                        const RichTextWidget(text: '座席数'),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8),
                           child: Container(
-                              width: 335,
-                              height: 38,
+                              width: double.infinity,
+                              height: 38.h,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(5),
                                   border: Border.all(
@@ -612,71 +617,71 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                               child: const Padding(
                                 padding: EdgeInsets.all(3),
                                 child: Text(
-                                  "40席",
+                                  '40席',
                                   style: TextStyle(
                                       fontSize: 16, color: Color(0xff454545)),
                                 ),
                               )),
                         ),
-                        const RichTextWidget(text: "喫煙席"),
+                        const RichTextWidget(text: '喫煙席'),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 5),
                           child: Row(
                             children: [
-                              Image.asset("assets/images/check.png"),
+                              Image.asset('assets/images/check.png'),
                               const Text(
-                                "有",
+                                '有',
                                 style: TextStyle(
                                     fontSize: 16, color: Color(0xff4B4948)),
                               ),
                               Padding(
                                 padding:
                                     const EdgeInsets.only(left: 50, right: 5),
-                                child: Image.asset("assets/images/wrong.png"),
+                                child: Image.asset('assets/images/wrong.png'),
                               ),
                               const Text(
-                                "無",
+                                '無',
                                 style: TextStyle(
                                     fontSize: 16, color: Color(0xff4B4948)),
                               ),
                             ],
                           ),
                         ),
-                        const RichTextWidget(text: "駐車場"),
+                        const RichTextWidget(text: '駐車場'),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 5),
                           child: Row(
                             children: [
-                              Image.asset("assets/images/check.png"),
+                              Image.asset('assets/images/check.png'),
                               const Text(
-                                "有",
+                                '有',
                                 style: TextStyle(
                                     fontSize: 16, color: Color(0xff4B4948)),
                               ),
                               Padding(
                                 padding:
                                     const EdgeInsets.only(left: 50, right: 5),
-                                child: Image.asset("assets/images/wrong.png"),
+                                child: Image.asset('assets/images/wrong.png'),
                               ),
                               const Text(
-                                "無",
+                                '無',
                                 style: TextStyle(
                                     fontSize: 16, color: Color(0xff4B4948)),
                               ),
                             ],
                           ),
                         ),
-                        const RichTextWidget(text: "来店プレゼント"),
+                        const RichTextWidget(text: '来店プレゼント'),
                         Row(
                           children: [
                             SizedBox(
                                 width: 20,
-                                child: Image.asset("assets/images/check.png")),
+                                child: Image.asset('assets/images/check.png')),
                             const SizedBox(
                               width: 160,
                               height: 30,
                               child: Text(
-                                "有（最大３枚まで）",
+                                '有（最大３枚まで）',
                                 style: TextStyle(
                                     fontSize: 16, color: Color(0xff4B4948)),
                               ),
@@ -685,7 +690,7 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                               padding:
                                   const EdgeInsets.only(left: 50, right: 5),
                               child: Image.asset(
-                                "assets/images/wrong.png",
+                                'assets/images/wrong.png',
                                 width: 20,
                               ),
                             ),
@@ -693,7 +698,7 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                               width: 30,
                               height: 30,
                               child: Text(
-                                "無",
+                                '無',
                                 style: TextStyle(
                                     fontSize: 16, color: Color(0xff4B4948)),
                               ),
@@ -703,7 +708,7 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                         Padding(
                           padding: const EdgeInsets.only(top: 5, bottom: 10),
                           child: SizedBox(
-                            height: 110,
+                            height: 110.h,
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               shrinkWrap: true,
@@ -718,18 +723,18 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                                       right: 20,
                                       top: 15,
                                       child: Image.asset(
-                                          "assets/images/cross.png"))
+                                          'assets/images/cross.png'))
                                 ],
                               ),
                             ),
                           ),
                         ),
-                        const RichTextWidget(text: "来店プレゼント名"),
+                        const RichTextWidget(text: '来店プレゼント名'),
                         Padding(
                           padding: const EdgeInsets.only(top: 8, bottom: 40),
                           child: Container(
-                              width: 335,
-                              height: 38,
+                              width: double.infinity,
+                              height: 38.h,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(5),
                                   border: Border.all(
@@ -737,7 +742,7 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                               child: const Padding(
                                 padding: EdgeInsets.all(3),
                                 child: Text(
-                                  "いちごクリームアイスクリーム, ジュース",
+                                  'いちごクリームアイスクリーム, ジュース',
                                   style: TextStyle(
                                       fontSize: 16, color: Color(0xff454545)),
                                 ),
@@ -746,8 +751,8 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                         GestureDetector(
                           onTap: () {},
                           child: Container(
-                            width: 335,
-                            height: 46,
+                            width: double.infinity,
+                            height: 46.h,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
                                 gradient: const LinearGradient(
@@ -758,13 +763,13 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                                     begin: Alignment.centerLeft,
                                     end: Alignment.centerRight,
                                     stops: [0, 1])),
-                            child: const Center(
+                            child: Center(
                                 child: Text(
-                              "編集を保存",
+                              '編集を保存',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 14),
+                                  fontSize: 14.h),
                             )),
                           ),
                         )

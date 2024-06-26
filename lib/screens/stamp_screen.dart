@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jiitak/constants/colors.dart';
 
 class StampScreen extends StatelessWidget {
@@ -7,14 +8,14 @@ class StampScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> newData = [
-      "20201 / 11 / 18",
-      "20201 / 11 / 17",
-      "20201 / 11 / 16",
-      "20201 / 11 / 13",
-      "20201 / 11 / 12",
+      "2021 / 11 / 18",
+      "2021 / 11 / 17",
+      "2021 / 11 / 16",
+      "2021 / 11 / 13",
+      "2021 / 11 / 12",
     ];
     return Scaffold(
-      backgroundColor: secondaryColor,
+      backgroundColor: const Color(0xffA8B1FF),
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const NeverScrollableScrollPhysics(),
@@ -33,7 +34,7 @@ class StampScreen extends StatelessWidget {
                             Navigator.pop(context);
                           },
                           child: const CircleAvatar(
-                              backgroundColor: Color(0xff949EFF),
+                              backgroundColor: secondaryColor,
                               radius: 23,
                               child: Icon(
                                 Icons.arrow_back_ios_new_rounded,
@@ -97,7 +98,7 @@ class StampScreen extends StatelessWidget {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 670,
+                height: 670.h,
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(30),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController? controller;
@@ -10,13 +11,12 @@ class CustomTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 5, bottom: 20),
       child: SizedBox(
-        width: 335,
         child: TextField(
           textAlign: TextAlign.left,
           controller: controller,
-          style: const TextStyle(
-              color: Color(0xff454545),
-              fontSize: 16,
+          style: TextStyle(
+              color: const Color(0xff454545),
+              fontSize: 16.h,
               fontWeight: FontWeight.normal),
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.only(left: 10, bottom: 10),
