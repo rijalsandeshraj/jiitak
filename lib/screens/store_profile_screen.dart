@@ -591,17 +591,18 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                           child: Container(
                               width: double.infinity,
                               height: 38.h,
+                              alignment: Alignment.centerLeft,
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 5, horizontal: 10),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(5),
                                   border: Border.all(
                                       color: const Color(0xffE8E8E8))),
-                              child: const Padding(
-                                padding: EdgeInsets.all(3),
-                                child: Text(
-                                  '美味しい！リーズナブルなオムライスランチ！',
-                                  style: TextStyle(
-                                      fontSize: 15, color: Color(0xff454545)),
-                                ),
+                              child: const Text(
+                                '美味しい！リーズナブルなオムライスランチ！',
+                                maxLines: 1,
+                                style: TextStyle(
+                                    fontSize: 15, color: Color(0xff454545)),
                               )),
                         ),
                         const RichTextWidget(text: '座席数'),
@@ -610,17 +611,17 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                           child: Container(
                               width: double.infinity,
                               height: 38.h,
+                              alignment: Alignment.centerLeft,
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 5, horizontal: 10),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(5),
                                   border: Border.all(
                                       color: const Color(0xffE8E8E8))),
-                              child: const Padding(
-                                padding: EdgeInsets.all(3),
-                                child: Text(
-                                  '40席',
-                                  style: TextStyle(
-                                      fontSize: 16, color: Color(0xff454545)),
-                                ),
+                              child: const Text(
+                                '40席',
+                                style: TextStyle(
+                                    fontSize: 16, color: Color(0xff454545)),
                               )),
                         ),
                         const RichTextWidget(text: '喫煙席'),
@@ -735,17 +736,17 @@ class _StoreProfileScreenState extends State<StoreProfileScreen> {
                           child: Container(
                               width: double.infinity,
                               height: 38.h,
+                              alignment: Alignment.centerLeft,
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 5, horizontal: 10),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(5),
                                   border: Border.all(
                                       color: const Color(0xffE8E8E8))),
-                              child: const Padding(
-                                padding: EdgeInsets.all(3),
-                                child: Text(
-                                  'いちごクリームアイスクリーム, ジュース',
-                                  style: TextStyle(
-                                      fontSize: 16, color: Color(0xff454545)),
-                                ),
+                              child: const Text(
+                                'いちごクリームアイスクリーム, ジュース',
+                                style: TextStyle(
+                                    fontSize: 16, color: Color(0xff454545)),
                               )),
                         ),
                         GestureDetector(

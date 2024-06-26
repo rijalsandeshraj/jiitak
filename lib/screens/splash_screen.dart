@@ -1,6 +1,7 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jiitak/screens/landing_screen.dart';
 import 'package:lottie/lottie.dart';
 
@@ -33,17 +34,21 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            Image.asset(
+              'assets/images/logo.png',
+              height: 30.h,
+            ),
+            Text(
               'JIITAK',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 25.h,
                 color: blackColor,
               ),
             ),
             Lottie.asset(
               'assets/animations/loader.json',
-              height: 70,
+              height: 70.h,
             ),
           ],
         ),
